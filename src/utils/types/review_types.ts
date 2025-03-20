@@ -3,4 +3,9 @@ export type CreateReviewTypes = {
     review: string;
 }
 
+export type UpdateReviewTypes = {
+    review_id: number;
+    review: string;
+}
+
 
