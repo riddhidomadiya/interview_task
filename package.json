@@ -1,0 +1,33 @@
+{
+  "name": "interview_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts",
+    "build": "npm install && tsc",
+    "build:watch": "tsc --watch",
+    "start": "tsc && node lib/index.js",
+    "dev": "tsc && nodemon lib/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.10",
+    "ts-lint": "^4.5.1",
+    "ts-node-dev": "^2.0.0"
+  }
+}
