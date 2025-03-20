@@ -5,6 +5,8 @@ import AppConstants from "./constants/app_constants";
 import { HttpStatusCodes } from "./constants/http_status_code";
 import customResponse from "./middleware/custom_responses";
 import cors from "cors";
+import userRoute from "./routes/user_route";
+import reviewRoute from "./routes/review_route";
 
 const PORT = AppConstants.port
 const app = express();
@@ -14,11 +16,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.set("json replacer", function (key: unknown, value: unknown) {
-  if (typeof value === "undefined") {
-      return null;
-  }
-  return value;
+    if (typeof value === "undefined") {
+        return null;
+    }
+    return value;
 });
+
+app.use("/user", userRoute);
+app.use("/review", reviewRoute);
 
 app.use("*", function (req, res) {
     res.status(404).json({
@@ -54,7 +59,7 @@ app.use(async (err: any, req: any, res: any, next: NextFunction) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
 
 
