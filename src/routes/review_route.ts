@@ -5,4 +5,7 @@ const router: Router = Router();
 
 router.post("/", auth, reviewController.addReview );
 router.patch("/", auth, reviewController.updateReview );
+router.delete("/", auth, reviewController.deleteReview );
+router.get("/", auth, reviewController.getUserReviews );
+router.post("/like_unlike", auth, reviewController.likeUnlikeOnReview );
 export default router;

@@ -25,11 +25,8 @@ app.set("json replacer", function (key: unknown, value: unknown) {
 app.use("/user", userRoute);
 app.use("/review", reviewRoute);
 
-app.use("*", function (req, res) {
-    res.status(404).json({
-        success: false,
-        error: "Page not found",
-    });
+app.use("/", function (req, res) {
+    res.send("server started..")
 });
 
 
