@@ -3,9 +3,10 @@
     "module": "commonjs",
     "sourceMap": true,
     "outDir": "lib",  // for store js file in lib folder
-    "target": "es6",
+    "target": "ES6",
     "esModuleInterop": true,
   },
   "compileOnSave": true,
-  "include": ["src"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

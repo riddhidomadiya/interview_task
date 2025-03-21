@@ -5,9 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint --ext .js,.ts",
-    "build": "npm install && tsc",
-    "build:watch": "tsc --watch",
-    "start": "tsc && node lib/index.js",
+    "build": "tsc",
+    "start": "node lib/index.js",
     "dev": "tsc && nodemon lib/index.js"
   },
   "keywords": [],
