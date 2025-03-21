@@ -4,9 +4,9 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "eslint --ext .js,.ts",
     "build": "tsc",
     "start": "node lib/index.js",
+    "vercel-build": "npm run build",
     "dev": "tsc && nodemon lib/index.js"
   },
   "keywords": [],
